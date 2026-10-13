@@ -1,0 +1,101 @@
+/* edit-vet-style.css */
+
+.edit-vet-container {
+    background-color: #faffc7; /* Admin dashboard canvas yellow */
+    border: 2px solid #003459; /* Signature brand blue */
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.edit-vet-title {
+    font-family: "Georgia", serif;
+    color: #003459;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Grid layout for labels and inputs */
+.edit-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 2px solid #003459;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 10px 15px;
+}
+
+.edit-label {
+    width: 220px;
+    font-weight: bold;
+    color: #003459;
+    font-family: "Georgia", serif;
+    border-right: 2px solid #003459; /* The vertical line from your wireframe */
+    margin-right: 15px;
+}
+
+.edit-label-info {
+    width: 340px;
+    font-weight: bold;
+    color: #003459;
+    font-family: "Georgia", serif;
+    border-right: 2px solid #003459; /* The vertical line from your wireframe */
+    margin-right: 15px;
+}
+
+.edit-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-family: "Georgia", serif;
+    color: #003459;
+    background: transparent;
+    font-size: 13px;
+}
+
+/* Specific styling for the large Textarea */
+.edit-textarea-container {
+    margin-top: 20px;
+}
+
+.edit-textarea {
+    width: 100%;
+    border: 2px solid #003459;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: "Georgia", serif;
+    background: #ffffff;
+}
+
+/* Footer and Button */
+.edit-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.save-btn {
+    background-color: #faffc7;
+    border: 2px solid #003459;
+    padding: 10px 30px;
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    color: #003459;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #003459; /* Blocky shadow look */
+    transition: 0.2s;
+}
+
+.save-btn:hover {
+    background-color: #a2b5f9; /* Matches your dashboard hover theme */
+}
+.cancelbtn{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #003459;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px;
+}

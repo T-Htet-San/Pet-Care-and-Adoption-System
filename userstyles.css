@@ -1,0 +1,413 @@
+/* adminstyles.css */
+
+/* ==========================================================================
+   GLOBAL DESIGN ALIGNMENT (Inherited from your site theme)
+   ========================================================================== */
+   body {
+    background: #afdcf1; 
+    font-family: "Georgia", serif;
+    color: #003459;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    padding-left: 130px;
+    padding-right: 130px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   CENTERED WORKSPACE BOX (Wraps both Dashboard and User List content panels)
+   ========================================================================== */
+.dashboard-screen-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.dashboard-box {
+    background-color: #faffc7; /* Your custom navbar/container canvas yellow */
+    border: 2px solid #f3c1d2; /* Pastel pink boundary border rules */
+    border-radius: 25px;
+    width: 100%;
+    max-width: 900px; 
+    padding: 30px 50px 40px 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER / TOP PROFILE ALIGNMENT
+   ========================================================================== */
+.dashboard-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin-profile-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #003459;
+}
+
+.admin-profile-badge span {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.admin-avatar-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border: 2px solid #003459;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.admin-profile-badge:hover .admin-avatar-circle {
+    background-color: #a2b5f9; 
+}
+
+/* ==========================================================================
+   MAIN CONTENT TITLES
+   ========================================================================== */
+.dashboard-title {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    color: #003459;
+}
+
+/* ==========================================================================
+   WIREFRAME MENU CARDS (Admin Dashboard Main Panel Setup)
+   ========================================================================== */
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center; 
+    margin-bottom: 45px;
+}
+
+.menu-card {
+    background-color: #faffc7; 
+    border: 2px solid #003459; 
+    border-radius: 4px; 
+    padding: 15px 35px;
+    min-width: 140px;
+    text-align: center;
+    text-decoration: none;
+    color: #003459;
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    box-shadow: 4px 4px 0px #003459; 
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    background-color: #a2b5f9; 
+}
+
+.menu-card:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #003459;
+}
+
+/* ==========================================================================
+   WIREFRAME DATA TABLE SYSTEM (User List Page Panel Setup)
+   ========================================================================== */
+.table-card {
+    background-color: #ffffff;
+    border: 2px solid #003459;
+    border-radius: 20px; 
+    overflow: hidden;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-card-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #003459;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+/* Aligns columns by adding empty space equivalent to row sidebar line tracks */
+.header-sidebar-spacer {
+    width: 80px; 
+    flex-shrink: 0;
+}
+
+/* Structural split alignment boxes wrapper */
+.table-card-body-wrapper {
+    display: flex;
+    min-height: 200px;
+}
+
+/* Left-side dynamic divider line element matching wireframes */
+.table-sidebar-accent {
+    width: 60px;
+    border-right: 2px solid #003459;
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+.table-rows-container {
+    flex-grow: 1;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Input-box like framing wrappers around rows */
+.table-data-row {
+    display: flex;
+    align-items: center;
+    border: 2px solid #003459;
+    border-radius: 6px;
+    padding: 8px 15px;
+    background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* RIGID COLUMN GRID WIDTH METRICS (Syncs Headings and Cells perfectly) */
+.col-name {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.col-email {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.col-phone {
+    width: 15%;
+    flex-shrink: 0;
+}
+
+.col-vetname{
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.col-vetemail{
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.col-animal{
+    width: 100px;
+    flex-shrink: 0;
+}
+.cell-data {
+    font-size: 15px;
+    color: #003459;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+/* Pulls Action Buttons to the absolute right tail of rows */
+.cell-actions {
+    width: 100px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-left: auto;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease;
+}
+
+.action-btn i {
+    font-size: 18px;
+    color: #003459;
+}
+
+.action-btn:hover {
+    transform: scale(1.15);
+}
+
+.no-data-msg {
+    text-align: center;
+    color: #a2b5f9;
+    font-style: italic;
+    margin-top: 40px;
+}
+
+/* ==========================================================================
+   FOOTER / SYSTEM OPERATION SELECTION LINK BUTTONS
+   ========================================================================== */
+.logout-container, .action-footer {
+    padding-top: 10px;
+    display: flex;         
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;           
+}
+
+.btn-logout, .btn-back {
+    background-color: #fbe7ee;
+    padding: 5px 20px;
+    border: 1px solid #f3c1d2;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #003459;
+    display: inline-block; 
+    font-family: "Georgia", serif;
+    font-size: 16px;
+}
+
+.btn-logout:hover, .btn-back:hover {
+    background-color: #a2b5f9;
+}
+/* ==========================================================================
+   ANIMAL LIST & PLUS BUTTON LAYOUT EXTENSIONS
+   ========================================================================== */
+
+/* Layout header row split rule container */
+.dashboard-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Styled wireframe Plus button linkage rule rules */
+.add-action-trigger {
+    color: #003459;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, color 0.15s ease;
+    padding: 5px;
+}
+
+.add-action-trigger:hover {
+    color: #a2b5f9;
+    transform: scale(1.2);
+}
+
+/* Fallback protection update if media breaks on low width metrics */
+@media (max-width: 768px) {
+    .dashboard-header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/* ==========================================================================
+   RESPONSIVE LAYOUT BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .dashboard-box {
+        padding: 20px;
+    }
+
+    .dashboard-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .table-sidebar-accent, .header-sidebar-spacer {
+        display: none; 
+    }
+    
+    .table-card-header {
+        display: none; 
+    }
+    
+    .table-data-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        position: relative;
+    }
+    
+    .cell-actions {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+    }
+}
+/* ==========================================================================
+   ANIMAL LIST & PLUS BUTTON LAYOUT EXTENSIONS
+   ========================================================================== */
+
+/* Layout header row split rule container */
+.dashboard-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Styled wireframe Plus button linkage rule rules */
+.add-action-trigger {
+    color: #003459;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, color 0.15s ease;
+    padding: 5px;
+}
+
+.add-action-trigger:hover {
+    color: #a2b5f9;
+    transform: scale(1.2);
+}
+
+
+/* Fallback protection update if media breaks on low width metrics */
+@media (max-width: 768px) {
+    .dashboard-header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

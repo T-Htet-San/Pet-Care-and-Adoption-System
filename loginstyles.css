@@ -1,0 +1,230 @@
+/* ==========================================================================
+   INDEX STYLES INTEGRATION (From your existing code)
+   ========================================================================== */
+   body {
+    background: #afdcf1; 
+    font-family: "Georgia", serif;
+    color: #a09af6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.btn2 {
+    background-color: #fbe7ee;
+    padding: 5px 20px;
+    border: 1px solid #f3c1d2;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #003459;
+    font-family: "Georgia", serif;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn2:hover {
+    background-color: #a2b5f9;
+}
+
+
+/* ==========================================================================
+   WIREFRAME LOGIN LAYOUT (With Split Image Configuration)
+   ========================================================================== */
+
+/* Centers the entire container window properly onto the viewport */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Reuses the color palette and border styles from your .contact-section / .pet-card */
+.login-card {
+    background-color: #faffc7;
+    border: 2px solid #f3c1d2;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 850px; /* Expanded from 500px to allow space for side-by-side design */
+    display: flex;
+    flex-direction: row; /* Arranges image side and form side horizontally */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Left Side Image Panel styling */
+.login-image-side {
+    flex: 1; /* Assigns equal 50% width distribution */
+    background-color: #fbe7ee; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-right: 2px solid #f3c1d2; /* Divider line separating left/right sides */
+}
+
+
+/* Makes image fill the grid column layout proportionally */
+.login-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents distortion, maintaining correct proportions */
+}
+
+/* Right Side Form Content wrapper */
+.login-form-side {
+    flex: 1; /* Assigns equal 50% width distribution */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card Top Row Header Split Line */
+.login-card-header {
+    border-bottom: 2px solid #f3c1d2;
+    padding: 35px 20px 15px 20px;
+    text-align: center;
+}
+
+/* Smooth hand-drawn look avatar icon generated using CSS shapes */
+.user-avatar {
+    width: 44px;
+    height: 22px;
+    background-color: #003459;
+    border-radius: 50% 50% 0 0;
+    margin: 0 auto 5px auto;
+    position: relative;
+}
+
+.user-avatar::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #003459;
+    border-radius: 50%;
+    top: -24px;
+    left: 11px;
+}
+
+.login-card-header h2 {
+    margin: 15px 0 0 0;
+    font-family: "Monaco", monospace;
+    color: #003459;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+/* Card Body Context Elements */
+.login-card-body {
+    padding: 35px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Inputs utilize design language from your .form-control contact settings */
+.form-control-custom {
+    width: 100%;
+    border: 2px solid #f3c1d2;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #003459;
+    font-family: "Georgia", serif;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-control-custom::placeholder {
+    color: #a2b5f9;
+    opacity: 0.7;
+}
+
+.forgot-link, .create-link {
+    color: #003459;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover, .create-link:hover {
+    color: #a2b5f9;
+    text-decoration: underline;
+}
+
+.forgot-link {
+    margin-bottom: 25px;
+}
+
+/* Custom Login Button mirroring the exact shadow box depth shown in your wireframe mockup */
+.btn-main-login {
+    width: 180px;
+    background-color: #fbe7ee;
+    padding: 8px 20px;
+    border: 2px solid #003459;
+    border-radius: 6px;
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    color: #003459;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #003459; /* Mimics the thick solid black wireframe outline offset */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.btn-main-login:hover {
+    background-color: #a2b5f9;
+}
+
+.btn-main-login:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #003459;
+}
+
+/* Bottom Actions Toolbar Row alignment wrapper */
+.login-card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINT UPGRADES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .container.login-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    /* Reverts back to standard top-to-bottom layout stack on small viewports */
+    .login-card {
+        flex-direction: column;
+        max-width: 450px;
+    }
+
+    /* Converts the left side panel into a header landscape banner on mobile */
+    .login-image-side {
+        height: 220px;
+        border-right: none;
+        border-bottom: 2px solid #f3c1d2;
+    }
+    
+    .login-card-body {
+        padding: 25px 25px;
+    }
+}

@@ -1,0 +1,159 @@
+/* dashboardstyles.css */
+
+/* ==========================================================================
+   GLOBAL DESIGN ALIGNMENT (Inherited from your site theme)
+   ========================================================================== */
+   body {
+    background: #afdcf1; 
+    font-family: "Georgia", serif;
+    color: #003459;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    padding-left: 130px;
+    padding-right: 130px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER / TOP PROFILE ALIGNMENT
+   ========================================================================== */
+   .dashboard-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+.admin-profile-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #003459;
+}
+
+.admin-profile-badge span {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.admin-avatar-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border: 2px solid #003459;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.admin-profile-badge:hover .admin-avatar-circle {
+    background-color: #a2b5f9; 
+}
+
+/* ==========================================================================
+   MAIN CONTENT AREA
+   ========================================================================== */
+.dashboard-title {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #003459;
+}
+
+/* Grid wrapper to map out your 4 main wireframe cards cleanly */
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    margin-left: 130px;
+}
+
+/* ==========================================================================
+   WIREFRAME MENU CARDS (Blended with Index Theme Color Spec)
+   ========================================================================== */
+.menu-card {
+    background-color: #faffc7; /* Reuses your navbar/contact container color */
+    border: 2px solid #003459; /* Crisp contrast matching button borders */
+    border-radius: 4px; /* Keeping it blocky like the sharp wireframe style */
+    padding: 15px 35px;
+    min-width: 140px;
+    text-align: center;
+    text-decoration: none;
+    color: #003459;
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    /* Creates the exact offset block shadow depth shown in your wireframe mockup */
+    box-shadow: 4px 4px 0px #003459; 
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    background-color: #a2b5f9; /* Standardized theme interactive highlight */
+}
+
+/* Interactive active-click animation to realistically depress the card layout */
+.menu-card:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #003459;
+}
+
+/* Logout button placement rules */
+.logout-container {
+    margin-top: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;         /* Turns the container into a flexbox wrapper */
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center;     /* Centers the items vertically */
+    width: 100%;           /* Ensures it takes up the full width of the workspace */
+}
+
+.btn-logout {
+    background-color: #fbe7ee;
+    padding: 5px 20px;
+    border: 1px solid #f3c1d2;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #003459;
+    display: inline-block; /* Helps the button maintain clean padding and spacing shapes */
+}
+
+.btn-logout:hover {
+    background-color: #a2b5f9;
+}
+
+/* ==========================================================================
+   RESPONSIVE VIEWPORTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .dashboard-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
